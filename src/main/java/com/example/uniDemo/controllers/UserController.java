@@ -1,9 +1,7 @@
 package com.example.uniDemo.controllers;
 
 import com.example.uniDemo.models.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +17,11 @@ class UserController {
     @GetMapping
     public List<User> getUsers(){
         return List.of(new User());
+    }
+
+    @PostMapping
+    public User createUser(@RequestBody User user){
+        return new User(user.getName(), user.getEmail(), user.getAge());
     }
 
 }
