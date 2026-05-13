@@ -1,4 +1,4 @@
-package com.example.demo.repositories;
+package com.example.uniDemo.repositories;
 
 import java.io.InputStream;
 import java.util.List;
